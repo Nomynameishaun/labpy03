@@ -1,17 +1,9 @@
-# Modal awal
-modal_awal = 100_000_000  # 100 juta dalam rupiah
-
-# Keuntungan per bulan
-keuntungan = [0, 0, 0.01, 0.01, 0.05, 0.05, 0.05, 0.02]
-
-# Menghitung total keuntungan
-total_keuntungan = 0
-
-# Loop untuk menghitung keuntungan tiap bulan
-for bulan, persen_keuntungan in enumerate(keuntungan, start=1):
-    laba_bulan = modal_awal * persen_keuntungan
-    total_keuntungan += laba_bulan
-    print(f"Bulan ke-{bulan}: Keuntungan = Rp {laba_bulan:,.0f}")
-
-# Menampilkan total keuntungan selama 8 bulan
-print(f"\nTotal keuntungan selama 8 bulan = Rp {total_keuntungan:,.0f}")
+import random
+n = int(input("Masukkan jumlah bilangan acak yang diinginkan: "))
+hasil = []
+while len(hasil) < n:
+    bilangan = random.random()
+    if bilangan < 0.5:
+        hasil.append(bilangan)
+for i, bilangan in enumerate(hasil, start=1):
+    print(f"Bilangan ke-{i}: {bilangan}")

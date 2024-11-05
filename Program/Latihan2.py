@@ -1,17 +1,8 @@
-
-
-# Meminta input jumlah bilangan acak
-n = int(input("Masukkan jumlah bilangan acak yang diinginkan: "))
-
-# Inisialisasi list untuk menyimpan bilangan acak
-hasil = []
-
-# Loop untuk menghasilkan bilangan acak
-while len(hasil) < n:
-    bilangan = random.random()
-    if bilangan < 0.5:
-        hasil.append(bilangan)
-
-# Menampilkan hasil
-for i, bilangan in enumerate(hasil, start=1):
-    print(f"Bilangan ke-{i}: {bilangan}")
+modal_awal = 100_000_000  # 100 juta dalam rupiah
+keuntungan = [0, 0, 0.01, 0.01, 0.05, 0.05, 0.05, 0.02]
+total_keuntungan = 0
+for bulan, persen_keuntungan in enumerate(keuntungan, start=1):
+    laba_bulan = modal_awal * persen_keuntungan
+    total_keuntungan += laba_bulan
+    print(f"Bulan ke-{bulan}: Keuntungan = Rp {laba_bulan:,.0f}")
+print(f"\nTotal keuntungan selama 8 bulan = Rp {total_keuntungan:,.0f}")
