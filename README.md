@@ -1,7 +1,7 @@
 # labpy03
 Halo!, ini dibuat untuk memenuhi tugas yang diberikan
 ## Latihan 1
-### Program Bilangan Acak Sederhana
+### Program Bahasa Python Bilangan Acak Sederhana
 ```ruby
 import random
 
@@ -28,7 +28,7 @@ Apabila dijalankan maka akan seperti berikut:
 ![1](<Gambar/randomf.png>)
 
 ## Latihan 2
-### Program Investasi Perbulan Sederhana
+### Program Bahasa Python Investasi Perbulan Sederhana
 ```ruby
 # Modal awal
 modal_awal = 100_000_000  # 100 juta dalam rupiah
@@ -53,3 +53,44 @@ Apabila dijalankan maka akan seperti berikut:
 ### Flowchart
 
 ![1](<Gambar/Modalf.png>)
+
+## Latihan 3
+### Program bahasa Python ATM Sederhana
+```ruby
+# Saldo awal pengguna
+saldo = 1000000
+
+# Fungsi untuk menampilkan menu dan melakukan penarikan
+def atm():
+    global saldo
+    while True:
+        print(f"\nSaldo saat ini: Rp {saldo}")
+        print("1. Tarik Uang")
+        print("2. Keluar")
+        pilihan = input("Pilih menu (1/2): ")
+
+        if pilihan == '1':
+            try:
+                jumlah = int(input("Masukkan jumlah penarikan: "))
+                if jumlah <= saldo:
+                    saldo -= jumlah
+                    print("Penarikan berhasil!")
+                else:
+                    print("Saldo tidak mencukupi!")
+            except ValueError:
+                print("Jumlah yang Anda masukkan tidak valid.")
+        
+        elif pilihan == '2':
+            print("Terima kasih telah menggunakan ATM!")
+            break
+
+        else:
+            print("Pilihan tidak valid. Silakan pilih menu 1 atau 2.")
+atm()
+```
+Apabila dijalankan maka hasilnya akan seperti berikut
+![1](<Gambar/ATMh.png>)
+
+### Flowchart
+
+![1](<Gambar/ATMf.png>)
